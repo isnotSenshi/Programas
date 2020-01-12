@@ -96,7 +96,7 @@ namespace ConsoleApp2
 ////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////
 //Podria hacer un vector con sus arreglos ya declarados.
-INT I[] = new int[100] = ={1,2,Linio,4,IT,Linio,7,8,Linio,IT,11,Linio,13,14,Linianos...ETC};
+INT I[] = new int[100] = {1,2,Linio,4,IT,Linio,7,8,Linio,IT,11,Linio,13,14,Linianos...ETC};
 
 //Para luego recorrerlo con un FOR(I < 101; I++)
 //Aunque es una manera poco ocurrente es una solucion
