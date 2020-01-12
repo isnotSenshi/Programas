@@ -1,0 +1,157 @@
+// solo se puede usar 1 if (no se puede usar else mmmhhh)
+// Multiplos de 3 = LINIO y 5 = IT 3 y 5 = Linianos jajajaja
+// Primera mascara sin condiciones del challenge
+// LENGUAJE C#
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+namespace ConsoleApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int I = 0;
+            int X = 0;
+            for (I = 1; I < 101; I++)
+            {
+                if(I % 3 == 0 && I % 5 == 0)
+                {
+                    Console.WriteLine("Linianos");
+                }
+                else if(I % 3 == 0)
+                {
+                    Console.WriteLine("Linio");
+                }else if (I % 5 == 0)
+                {
+                    Console.WriteLine("IT");
+                }
+                else
+                {
+                    Console.WriteLine("{0}",I);
+                }
+            }
+            Console.ReadKey();            
+        }
+    }
+}
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+// AHORA CON LA CONDICION DE SACAR LOS IF Y USAR SWITCH
+// AUNQUE ESTO FORMARIA PARTE DEL MULTIWAY BRANCH USANDO SWITCH (creo)
+
+namespace ConsoleApp2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int I = 0;
+            int X = 0;
+            for (I = 1; I < 101; I++)
+            {
+                if (I % 3 == 0 && I % 5 == 0)
+                {
+                    Console.WriteLine("Linianos");
+                    X = 1;
+                }
+                switch (I % 3)
+                {
+                    case 0:
+                        {
+                            Console.WriteLine("Linio");
+                            X = 1;
+                            break;
+                        }
+                }
+
+                switch (I % 5)
+                {
+                    case 0:
+                        {
+                            Console.WriteLine("IT");
+                            X = 1;
+                            break;
+                        }
+                }
+                switch(X)
+                {
+                    case 0:
+                        {
+                            Console.WriteLine("{0}",I);
+                            break;
+                        }
+                }
+                X = 0;
+            }
+            Console.ReadKey();            
+        }
+    }
+}
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+//Podria hacer un vector con sus arreglos ya declarados.
+INT I[] = new int[100] = ={1,2,Linio,4,IT,Linio,7,8,Linio,IT,11,Linio,13,14,Linianos...ETC};
+
+//Para luego recorrerlo con un FOR(I < 101; I++)
+//Aunque es una manera poco ocurrente es una solucion
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+//O Solo con while
+
+namespace ConsoleApp3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int I = 0;
+            bool X = false;
+            for (I = 1; I < 101; I++)
+            {
+                X = false;
+
+                while ((I % 5 == 0 && I % 3 == 0) && X == false)
+                {
+                    Console.WriteLine("Linianos");
+                    X = true;
+                    break;
+                }
+
+                while (I % 5 == 0 && X == false)
+                {
+                    Console.WriteLine("IT");
+                    X = true;
+                    break;
+                }
+
+                while(I % 3 == 0 && X == false)
+                {
+                    Console.WriteLine("Linio");
+                    X = true;
+                    break;
+                }
+
+                while (X == false)
+                {
+                    Console.WriteLine("{0}", I);
+                    break;
+                }
+            }
+            Console.ReadKey();            
+        }
+    }
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+    
+
+
